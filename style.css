@@ -47,7 +47,7 @@ body {
     z-index: -1;
     width: 50%;
     height: 55%;
-    background-color: var(--Light-Violet);
+    background: linear-gradient(45deg, var(--Light-Violet), var(--Light-Magenta));
     border-radius: 0% 0% 100% 0% / 0% 0% 50% 0%;
     -webkit-border-radius: 0% 0% 100% 0% / 0% 0% 50% 0%;
     -moz-border-radius: 0% 0% 100% 0% / 0% 0% 50% 0%;
@@ -64,7 +64,7 @@ body {
     width: 50%;
     height: 50%;
     background-color: var(--sub-heading);
-    opacity: 0.5;
+    opacity: 0.2;
     border-radius: 100% 0% 0% 0% / 54% 0% 0% 0%;
     -webkit-border-radius: 100% 0% 0% 0% / 54% 0% 0% 0%;
     -moz-border-radius: 100% 0% 0% 0% / 54% 0% 0% 0%;
@@ -83,7 +83,7 @@ body {
     -moz-border-radius: 35px;
     -ms-border-radius: 35px;
     -o-border-radius: 35px;
-    box-shadow: 0px 5px 5px 0px hsl(206deg 3% 58%);
+    box-shadow: 10px 15px 15px 0px hsl(206deg 3% 58%);
 }
 
 #mobile::before {
@@ -381,19 +381,23 @@ body {
         -o-border-radius: 0% 0% 70% 55% / 0% 0% 40% 27%;
     }
     #product-card::after {
-        border-radius: 80% 0% 0% 0% / 35% 0% 0% 0%;
-        width: 25%;
-        height: 88%;
-        -webkit-border-radius: 80% 0% 0% 0% / 35% 0% 0% 0%;
-        -moz-border-radius: 80% 0% 0% 0% / 35% 0% 0% 0%;
-        -ms-border-radius: 80% 0% 0% 0% / 35% 0% 0% 0%;
-        -o-border-radius: 80% 0% 0% 0% / 35% 0% 0% 0%;
-    }
+        width: 23%;
+        height: 86%;
+        border-radius: 75% 0% 0% / 35% 0% 0%;
+        -webkit-border-radius: 75% 0% 0% / 35% 0% 0%;
+        -moz-border-radius: 75% 0% 0% / 35% 0% 0%;
+        -ms-border-radius: 75% 0% 0% / 35% 0% 0%;
+        -o-border-radius: 75% 0% 0% / 35% 0% 0%;
+}
     #mobile {
         width: 41%;
         margin: 15% auto;
         margin-left: 55%;
         margin-top: 18%;
+    }
+    #product-description {
+        padding: 15%;
+        margin: 0 20% 0 0;
     }
     #product-description p {
         font-size: 16px;
@@ -401,9 +405,5 @@ body {
     }
     #product-description h1 {
         text-align: left;
-    }
-    #product-description {
-        padding: 15%;
-        margin: 15% 15% 0 0;
     }
 }
