@@ -42,7 +42,7 @@ body {
 #product-card::before {
     content: '';
     position: absolute;
-    left: 0;
+    left: 0px;
     top: 0;
     z-index: -1;
     width: 50%;
@@ -64,6 +64,7 @@ body {
     width: 50%;
     height: 50%;
     background-color: var(--sub-heading);
+    opacity: 0.5;
     border-radius: 100% 0% 0% 0% / 54% 0% 0% 0%;
     -webkit-border-radius: 100% 0% 0% 0% / 54% 0% 0% 0%;
     -moz-border-radius: 100% 0% 0% 0% / 54% 0% 0% 0%;
@@ -72,7 +73,7 @@ body {
 }
 
 #mobile {
-    margin: 15% 25%;
+    margin: 15% 0;
     background-color: var(--app-background);
     position: relative;
     width: 70%;
@@ -116,6 +117,7 @@ body {
 }
 
 #avatar {
+    position: relative;
     padding: 12px 25px;
     padding-top: 25px;
     width: 100%;
@@ -124,10 +126,25 @@ body {
     align-items: center;
 }
 
+.fa-chevron-circle-left {
+    color: transparent;
+}
+
 #avatar::before {
-    position: absolute;
+    color: var(--sub-heading);
     content: '\f104';
     font: normal normal normal 14px/1 FontAwesome;
+    position: absolute;
+    left: 5%;
+    top: 50%;
+}
+
+#avatar::after {
+    color: var(--sub-heading);
+    content: '\f142';
+    font: normal normal normal 14px/1 FontAwesome;
+    position: absolute;
+    right: 5%;
 }
 
 #avatar-img-box {
@@ -151,17 +168,17 @@ body {
 }
 
 #avatar-info {
-    padding-left: 10px;
+    padding-left: 8px;;
     color: var(--sub-heading);
     position: relative;
 }
 
 #avatar-name {
-    font-size: 15px;
+    font-size: 12px;
 }
 
 #avatar-status {
-    font-size: 8px;
+    font-size: 7px;
     color: var(--sub-heading);
     opacity: 0.6;
 }
@@ -255,17 +272,35 @@ body {
 
 #walk-bars-box div {
     width: 75%;
+    position: relative;
+}
+
+#walk-bars-box div::before {
+    position: absolute;
+    content: '';
+    top: calc(50% - 7px);
+    left: 10px;
+    width: 11px;
+    height: 11px;
+    border: 1px solid var(--sub-heading);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    background-color: transparent;
 }
 
 #walk-bars-box p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px;
+    padding: 10px;
+    padding-left: 30px;
     font-size: 9px;
     color: var(--sub-heading);
     background: linear-gradient(45deg, var(--Light-Magenta), var(--Light-Violet));
-    border-radius: 10px 10px 10px 3px;
+    border-radius: 13px 13px 13px 4px;
     -webkit-border-radius: 10px 10px 10px 3px;
     -moz-border-radius: 10px 10px 10px 3px;
     -ms-border-radius: 10px 10px 10px 3px;
@@ -280,13 +315,14 @@ body {
 
 #send-message-box {
     width: 100%;
+    position: relative;
 }
 
 #message-input {
     width: 100%;
     color: var(--place-holder-text);
     background-color: var(--White);
-    padding: 10px;
+    padding: 10px 20px;
     outline: 0;
     border: 0px solid transparent;
     border-radius: 20px;
@@ -296,8 +332,22 @@ body {
     -o-border-radius: 20px;
 }
 
+#message-input::placeholder {
+    font-size: 10px;
+    color: var(--place-holder-text);
+}
+
+.fa-chevron-circle-right {
+    color: var(--submit-button-background);
+    font-size: 25px;
+    position: absolute;
+    top: calc(50% - 12px);
+    right: 4px;
+}
+
 #product-description {
-    margin: 0 15px 40px 15px;
+    margin: 30px;
+    margin-top: 0;
     color: var(--paragraph);
 }
 
@@ -310,6 +360,49 @@ body {
 #product-description p {
     font-size: 15px;
     text-align: center;
-    padding: 15px 25px;
+    padding: 12px 0;
     line-height: 25px;
+}
+
+@media screen and (min-width: 1440px) {
+    #product-card {
+        display: grid;
+        grid-template-columns: 1.5fr 2fr;
+    }
+    #product-card::before {
+        width: 30%;
+        height: 85%;
+        left: -25px;
+        border-radius: 0% 0% 70% 55% / 0% 0% 40% 27%;
+        -webkit-border-radius: 0% 0% 70% 55% / 0% 0% 40% 27%;
+        -moz-border-radius: 0% 0% 70% 55% / 0% 0% 40% 27%;
+        -ms-border-radius: 0% 0% 70% 55% / 0% 0% 40% 27%;
+        -o-border-radius: 0% 0% 70% 55% / 0% 0% 40% 27%;
+    }
+    #product-card::after {
+        border-radius: 80% 0% 0% 0% / 35% 0% 0% 0%;
+        width: 25%;
+        height: 88%;
+        -webkit-border-radius: 80% 0% 0% 0% / 35% 0% 0% 0%;
+        -moz-border-radius: 80% 0% 0% 0% / 35% 0% 0% 0%;
+        -ms-border-radius: 80% 0% 0% 0% / 35% 0% 0% 0%;
+        -o-border-radius: 80% 0% 0% 0% / 35% 0% 0% 0%;
+    }
+    #mobile {
+        width: 45%;
+        margin: 15% auto;
+        margin-left: 55%;
+        margin-top: 25%;
+    }
+    #product-description p {
+        font-size: 16px;
+        text-align: left;
+    }
+    #product-description h1 {
+        text-align: left;
+    }
+    #product-description {
+        padding: 15%;
+        margin: 15% 15% 0 0;
+    }
 }
