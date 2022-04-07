@@ -76,7 +76,7 @@ body {
     margin: 15% 0;
     background-color: var(--app-background);
     position: relative;
-    width: 70%;
+    width: 260px;
     border: 10px solid var(--White);
     border-radius: 35px;
     -webkit-border-radius: 35px;
